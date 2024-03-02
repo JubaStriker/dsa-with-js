@@ -1,0 +1,10 @@
+Big-O Guide
+------------
+
+Calculation not dependent on the input size - O(1)
+
+1 Loop - O(n)
+
+2 nested loops - O(n^2)
+
+Input size reduced by half - O(log n)

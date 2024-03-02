@@ -9,3 +9,5 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(5));
+
+// Big O -> O(n)  -> Linear time complexity
