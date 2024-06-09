@@ -1,3 +1,3 @@
-function newSort() {
-
+function newSort(arr) {
+    return arr
 }
