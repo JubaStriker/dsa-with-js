@@ -15,3 +15,5 @@ function recursiveFactorial(n) {
 }
 
 console.log(recursiveFactorial(3));
+
+// Big(O) - 2^n
