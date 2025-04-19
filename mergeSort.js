@@ -25,3 +25,5 @@ const arr = [8, 20, -2, 4, -6]
 mergeSort(arr)
 
 console.log(mergeSort(arr))
+
+// Big(O) - O(n log n)
