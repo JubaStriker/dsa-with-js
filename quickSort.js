@@ -19,5 +19,5 @@ const arr = [8, 20, -2, 4, -6]
 
 quickSort(arr)
 
-console.log(quickSort(arr))
+console.log(arr)
 
