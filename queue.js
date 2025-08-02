@@ -12,7 +12,7 @@ class Queue {
     }
 
     peek() {
-        if (!this.items.isEmpty()) {
+        if (!this.isEmpty()) {
             return this.items[0];
         }
         return null;
@@ -30,3 +30,14 @@ class Queue {
         console.log(this.items.join(" <- "));
     }
 }
+
+const queue = new Queue();
+
+console.log(queue.isEmpty());
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+queue.print();
+console.log(queue.size());
+console.log(queue.peek());
