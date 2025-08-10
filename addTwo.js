@@ -42,5 +42,6 @@ function arrayToLinkedList(arr) {
 // Modified test case
 const l1 = arrayToLinkedList([2, 4, 3]);
 const l2 = arrayToLinkedList([5, 6, 4]);
+const l3 = arrayToLinkedList([0, 0, 0, 0, 0, 0, 0, 0, 1]);
 
 console.log(addTwoNumbers(l1, l2));
