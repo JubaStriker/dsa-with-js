@@ -26,4 +26,18 @@ class CircularQueue {
             this.front = this.rear;
         }
     }
+
+    dequeue() {
+        if (this.isEmpty()) {
+            return "Queue is empty";
+        }
+        const item = this.items[this.front];
+        this.items[this.front] = null;
+        this.front = this.front + 1;
+        this.currentLength -= 1;
+        if (this.isEmpty()) {
+            this.front = -1;
+            this.rear = -1;
+        }
+    }
 }
