@@ -48,4 +48,33 @@ class CircularQueue {
         }
         return this.items[this.front];
     }
+
+    print() {
+        if (this.isEmpty()) {
+            return "Queue is empty";
+        } else {
+            let str = "";
+            for (let i = this.front; i !== this.rear; i = (i + 1) % this.capacity) {
+                str += this.items[i] + " ";
+            }
+            str += this.items[this.rear];
+            console.log(str);
+        }
+
+    }
 }
+
+
+const queue = new CircularQueue(5);
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+queue.enqueue(5);
+// queue.print(); // 1 2 3 4 5
+console.log(queue.dequeue()); // 1
+queue.enqueue(6); // Queue is full
+// queue.print(); // 2 3 4 5
+console.log(queue.peek()); // 2
+queue.dequeue(); // 2  
+queue.peek(); // 3
