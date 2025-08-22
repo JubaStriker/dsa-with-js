@@ -3,29 +3,14 @@ function maxSubArray(arr) {
     let currentSum = arr[0];
     let maxSum = arr[0];
 
-    let start = 0;
-    let tempStart = 0;
-    let end = 0;
+
 
     for (let i = 1; i < arr.length; i++) {
         let num = arr[i];
-
-        if (num > currentSum + num) {
-            currentSum = num;
-            tempStart = i;
-        } else {
-            currentSum += num;
-        }
-
-        if (currentSum > maxSum) {
-            maxSum = currentSum;
-            start = tempStart;
-            end = i;
-        }
+        currentSum = Math.max(num, currentSum + num);
+        maxSum = Math.max(maxSum, currentSum)
     }
-
-    const subArray = arr.slice(start, end + 1);
-    return { maxSum, subArray }
+    return maxSum;
 }
 
 
