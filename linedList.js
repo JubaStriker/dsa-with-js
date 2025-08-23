@@ -18,4 +18,12 @@ class LinedList {
     getSize() {
         return this.size;
     }
+
+    prepend(value) {
+        const node = new Node(value);
+        if (this.isEmpty()) {
+            this.head = node;
+        }
+        this.size++;
+    }
 }
