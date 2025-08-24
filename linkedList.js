@@ -23,7 +23,18 @@ class LinedList {
         const node = new Node(value);
         if (this.isEmpty()) {
             this.head = node;
+        } else {
+            node.next = this.head;
+            this.head = node
         }
         this.size++;
     }
 }
+
+const list = new LinedList();
+console.log(list.isEmpty());
+console.log(list.getSize());
+list.prepend(10);
+list.prepend(20);
+console.log(list.isEmpty());
+console.log(list.getSize());
