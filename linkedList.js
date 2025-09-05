@@ -29,6 +29,20 @@ class LinedList {
         }
         this.size++;
     }
+
+    print() {
+        if (this.isEmpty()) {
+            console.log("List is empty");
+        } else {
+            let curr = this.head;
+            let listValues = '';
+            while (curr) {
+                listValues += `${curr.value} `;
+                curr = curr.next;
+            }
+            console.log(listValues);
+        }
+    }
 }
 
 const list = new LinedList();
@@ -38,3 +52,4 @@ list.prepend(10);
 list.prepend(20);
 console.log(list.isEmpty());
 console.log(list.getSize());
+list.print();
