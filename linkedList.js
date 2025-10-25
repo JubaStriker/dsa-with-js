@@ -46,6 +46,7 @@ class LinedList {
 }
 
 const list = new LinedList();
+list.print();
 console.log(list.isEmpty());
 console.log(list.getSize());
 list.prepend(10);
