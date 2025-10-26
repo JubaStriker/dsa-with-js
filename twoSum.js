@@ -20,8 +20,6 @@ function twoSumOptimal(nums, target) {
         numMap.set(nums[i], i);
 
     }
-    console.log('getting 2', numMap.get(2));
-
 }
 
 console.log(twoSumOptimal([2, 7, 11, 15], 26));
