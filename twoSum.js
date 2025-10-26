@@ -11,15 +11,17 @@ var twoSum = function (nums, target) {
 
 
 function twoSumOptimal(nums, target) {
-    let map = new Map();
+    const numMap = new Map();
     for (let i = 0; i < nums.length; i++) {
-        let complement = target - nums[i];
-        if (map.has(complement)) {
-            return [map.get(complement), i];
+        const complement = target - nums[i];
+        if (numMap.has(complement)) {
+            return [numMap.get(complement), i];
         }
-        map.set(nums[i], i);
+        numMap.set(nums[i], i);
+
     }
-    return [];
+    console.log('getting 2', numMap.get(2));
+
 }
 
-console.log(twoSumOptimal([2, 7, 11, 15], 9));
+console.log(twoSumOptimal([2, 7, 11, 15], 26));
