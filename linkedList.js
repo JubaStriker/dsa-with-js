@@ -30,6 +30,26 @@ class LinedList {
         this.size++;
     }
 
+    insert(value, index) {
+        if (index < 0 || index > this.size) {
+            console.log("Invalid index");
+            return
+        };
+        if (index === 0) {
+            this.prepend(value);
+        } else {
+            const node = new Node(value);
+            let prev = this.head;
+            for( let i = 0; i < index-1; i++) {
+                prev = prev.next;
+            }
+            node.next = prev.next;
+            prev.next = node;
+            this.size++;
+        }
+
+    }
+
     print() {
         if (this.isEmpty()) {
             console.log("List is empty");
@@ -53,4 +73,7 @@ list.prepend(10);
 list.prepend(20);
 console.log(list.isEmpty());
 console.log(list.getSize());
+
+list.insert(5, 0);
+list.insert(30, 1);
 list.print();
