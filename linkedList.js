@@ -76,4 +76,5 @@ console.log(list.getSize());
 
 list.insert(5, 0);
 list.insert(30, 1);
+list.insert(34, 5);
 list.print();
