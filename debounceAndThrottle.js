@@ -20,3 +20,14 @@ log('a'); log('b'); log('c'); // only 'c' fires after 300ms
 // set this = ctx, pass args as array ← debounce uses this
 // fn.bind(ctx)(a, b)
 // returns new fn with this bound, call later
+
+function throttle(fn, limit) {
+    let lastCall = 0;
+
+    return function (...args) {
+        let now = Date.now();
+        if (now - lastCall > limit) {
+            fn.apply(this, args);
+        }
+    }
+}
