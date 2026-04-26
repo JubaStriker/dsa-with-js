@@ -3,8 +3,6 @@ function maxSubArray(arr) {
     let currentSum = arr[0];
     let maxSum = arr[0];
 
-
-
     for (let i = 1; i < arr.length; i++) {
         let num = arr[i];
         currentSum = Math.max(num, currentSum + num);
