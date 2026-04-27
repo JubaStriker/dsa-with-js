@@ -15,3 +15,12 @@ setTimeout(timer.start, 10);         // → "Started: undefined"
 
 // ✓ FIXED with bind — 'this' is locked to timer object
 setTimeout(timer.start.bind(random), 10);  // → "Started: Timer A"
+
+
+// Bind implementation
+Function.prototype.myBind = function (context, ...args) {
+  const fn = this;
+  return function (...newArgs) {
+    return fn.apply(context, [...args, ...newArgs])
+  }
+}
